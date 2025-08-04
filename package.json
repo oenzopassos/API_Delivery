@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file src/server.ts"
+    "dev": "dotenv -e .env -- tsx watch src/server.ts"
   },
   "license": "ISC",
   "author": "Enzo Passos",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.14.12",
+    "dotenv-cli": "^10.0.0",
     "prisma": "^5.19.1",
     "tsx": "^4.16.2",
     "typescript": "^5.5.4"
