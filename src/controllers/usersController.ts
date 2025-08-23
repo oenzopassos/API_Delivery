@@ -28,15 +28,13 @@ class UsersController {
             data: {
                 name,
                 email,
-                password: hashedPassword
-            }
+                password: hashedPassword,
+            },
         })
 
         const { password: _, ...userWithoutPassword } = user
 
-        return response.status(201).json({
-            userWithoutPassword
-        })
+        return response.status(201).json(userWithoutPassword)
     }
 }
 
