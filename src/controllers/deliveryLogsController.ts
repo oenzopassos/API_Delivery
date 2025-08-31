@@ -58,6 +58,9 @@ class DeliveryLogsController {
             }
         })
 
+        if(!delivery) {
+            throw new AppError("Task not found", 404);
+        }
 
         if (request.user?.role === 'customer' && delivery?.userId !== request.user.id) {
             throw new AppError("The user can only view their deliveries", 401);
